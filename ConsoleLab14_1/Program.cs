@@ -10,14 +10,14 @@ namespace ConsoleLab14
     {
         static void Main(string[] args)
         {
-            Cat cat = new Cat("Кошка");
-            cat.ShowInfo();
-            Dog dog = new Dog("Собака");
-            dog.ShowInfo();
-            UnnamedAnimal human = new UnnamedAnimal();
-            human.ShowInfo();
-
-
+            Cat cat1 = new Cat("Кошка");
+            cat1.ShowInfo();
+            Dog dog1 = new Dog("Собака");
+            dog1.ShowInfo();
+            Cat cat2 = new Cat();
+            cat2.ShowInfo();
+            Dog dog2 = new Dog();
+            dog2.ShowInfo();
             Console.WriteLine();
             Console.WriteLine("Для завершения нажмите любую клавишу");
             Console.ReadKey();
@@ -62,6 +62,11 @@ namespace ConsoleLab14
             this.name = Name;
         }
 
+        public Cat()
+        {
+            this.name = Name;
+        }
+
         public override string Say()
         {
             return "Мяу!";
@@ -88,30 +93,14 @@ namespace ConsoleLab14
             this.name = Name;
         }
 
+        public Dog()
+        {
+            this.name = Name;
+        }
+
         public override string Say()
         {
             return "Гав!";
-        }
-    }
-
-    class UnnamedAnimal : Animal
-    {
-        string Name;
-        public override string name
-        {
-            get
-            {
-                return Name;
-            }
-            set
-            {
-                Name = value;
-            }
-        }
-
-        public override string Say()
-        {
-            return "Привет!";
         }
     }
 }

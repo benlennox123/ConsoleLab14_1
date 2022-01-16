@@ -26,11 +26,11 @@ namespace ConsoleLab14
 
     abstract class Animal
     {
-        public abstract string name { get; set; }
+        public abstract string Name { get; set; }
 
         public Animal(string name = "некое животное")
         {
-            this.name = name;
+            this.Name = name;
         }
 
         public abstract string Say();
@@ -38,22 +38,22 @@ namespace ConsoleLab14
         public void ShowInfo()
         {
             string say = Say();
-            Console.WriteLine("{0} \t{1}", name, say);
+            Console.WriteLine("{0} \t{1}", Name, say);
         }
     }
 
     class Cat : Animal
     {
-        string Name;
-        public override string name
+        string name;
+        public override string Name
         {
             get
             {
-                return Name;
+                return name;
             }
             set
             {
-                Name = value;
+                name = value;
             }
         }
 
@@ -75,16 +75,16 @@ namespace ConsoleLab14
 
     class Dog : Animal
     {
-        string Name;
-        public override string name
+        string name;
+        public override string Name
         {
             get
             {
-                return Name;
+                return name;
             }
             set
             {
-                Name = value;
+                name = value;
             }
         }
 
